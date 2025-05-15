@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    .reg{
+        display: none;
+    }
+</style>
+<body>
+    <div class="log">
+        <div class="login">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Email..." required>
+                    <i class="fa fa-user" ></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password..." required>
+                    <i class="fa fa-lock" ></i>
+                </div>
+                <div class="check">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="">Forget password?</a>
+                </div>
+    
+                <button type="submit" class="btn">Login</button>
+                <div class="register">
+                    <p>Don't have an account?
+                        <a href="" class="regs">Register</a>
+                    </p>
+                    <p style="margin-top: 10px;">Admin to 
+                        <a href="login2.html" style="color: blue;">AdminDashboard</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="reg">
+    <div class="login">
+        <form action="">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="email" placeholder="Email..." required>
+                <i class="fa fa-user" ></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password..." required>
+                <i class="fa fa-lock" ></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password..." required>
+                <i class="fa fa-lock" ></i>
+            </div>
+            <div class="check">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="" class="logi">Login</a>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+    </div>
+    <script>
+
+        let btn = document.querySelector(".logi");
+        let btn2 =document.querySelector(".regs");
+        let form = document.querySelector('.log');
+        let form2 =document.querySelector('.reg');
+        btn2.addEventListener('click',function(event){
+            event.preventDefault();
+            form.style.display="none";
+            form2.style.display="block";
+            
+        })
+        btn.addEventListener('click',function(event){
+            event.preventDefault();
+            form.style.display="block";
+            form2.style.display="none";
+
+        })
+    </script> 
+</body>
+</html>
